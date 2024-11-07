@@ -44,10 +44,29 @@ nav a {
 }
 
 /* Jumbotron styles */
+@media (max-width: 768px) {
+  .jumbotron .display-4 {
+    font-size: 2rem;
+  }
+
+  .jumbotron .lead {
+    font-size: 1rem;
+  }
+
+  .jumbotron .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+}
+
 .jumbotron {
   background-color: #343a40;
   color: #1c1b1b;
-  padding: 25vh;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
   text-align: center;
   background:url(./img/welcome.jpg)no-repeat center center/cover ;
   

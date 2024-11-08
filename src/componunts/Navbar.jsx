@@ -31,40 +31,40 @@ const Navbar = () => {
           <img src={logo} alt="logo" height="35" className="d-inline-block align-text-top" />
         </Link>
         <button
-  onClick={toggleMenu}
-  className="navbar-toggler"
-  type="button"
-  aria-controls="navbarNav"
-  aria-expanded={isOpen}
-  aria-label="Toggle navigation"
->
-  <svg
-    aria-hidden="true"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 17 14"
-    width="30" // Adjust width and height as needed
-    height="30"
-  >
-    {isOpen ? (
-      <path
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M1 1h15M1 7h15M1 13h15"
-      />
-    ) : (
-      <path
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M3 1h11M3 7h11M3 13h11"
-      />
-    )}
-  </svg>
-</button>
+          onClick={toggleMenu}
+          className="navbar-toggler"
+          type="button"
+          aria-controls="navbarNav"
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation"
+        >
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+            width="30" // Adjust width and height as needed
+            height="30"
+          >
+            {isOpen ? (
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            ) : (
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M3 1h11M3 7h11M3 13h11"
+              />
+            )}
+          </svg>
+        </button>
         <div className={`collapse navbar-collapse ${isOpen ? 'd-block' : 'd-none'} justify-content-end`} id="navbarNav">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">

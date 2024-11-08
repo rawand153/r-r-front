@@ -128,7 +128,7 @@ justify-content: space-around;
 
 /* Contact styles */
 .contact-card {
-  width: 60%; /* Adjust the width to your preference */
+  width: 100%; /* Adjust the width to your preference */
   max-width: 400px;
   margin: auto;
   padding: 20px;
@@ -140,11 +140,12 @@ justify-content: space-around;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh; /* Adjust the height to your preference */
+  overflow: auto;
 }
 
 .contact-card h2 {
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .contact-card label {
@@ -156,7 +157,7 @@ justify-content: space-around;
 .contact-card input,
 .contact-card textarea {
   width: 100%; /* Make the input fields take up the full width */
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -171,6 +172,7 @@ justify-content: space-around;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .contact-card button:hover {
@@ -181,9 +183,12 @@ justify-content: space-around;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .contactPage:before {
@@ -191,8 +196,77 @@ justify-content: space-around;
   background: url('./img/contact.jpg') no-repeat center center/cover;
   z-index: -1;
   position: absolute;
-  width: 100vw;
-  height: 82.1vh;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .contact-card {
+    width: 70%;
+    max-width: 500px;
+    padding: 30px;
+  }
+
+  .contact-card h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact-card input,
+  .contact-card textarea {
+    font-size: 1.1rem;
+  }
+
+  .contact-card button {
+    font-size: 18px;
+  }
+}
+
+/* For desktop screens */
+@media (min-width: 1024px) {
+  .contact-card {
+    width: 50%;
+    max-width: 600px;
+    padding: 40px;
+  }
+
+  .contact-card h2 {
+    font-size: 2rem;
+  }
+
+  .contact-card input,
+  .contact-card textarea {
+    font-size: 1.2rem;
+  }
+
+  .contact-card button {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 15px;
+  }
+
+  .contact-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .contact-card input,
+  .contact-card textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-card button {
+    font-size: 14px;
+  }
 }
 
 /*footer styles*/
